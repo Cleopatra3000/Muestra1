@@ -1,0 +1,93 @@
+.header {
+  position: relative;
+  z-index: 20;
+  display: block;
+  margin-top: 0.35rem;
+}
+
+.imageHero {
+  min-height: auto;
+  padding: 1rem;
+  border-radius: 32px;
+  overflow: hidden;
+  border: 1px solid rgba(218, 172, 128, 0.2);
+  box-shadow: var(--shadow-lg);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.14), transparent 42%),
+    #161214;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: padding 0.2s ease, border-radius 0.2s ease, box-shadow 0.2s ease;
+}
+
+.imageHeroExpanded {
+  padding: 1rem;
+}
+
+.imageButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+  padding: 0;
+}
+
+.imageHeroExpanded .imageButton {
+  cursor: zoom-out;
+}
+
+.image {
+  width: min(100%, 420px);
+  height: auto;
+  max-height: 420px;
+  display: block;
+  object-fit: contain;
+  object-position: center center;
+  border-radius: 22px;
+  box-shadow: var(--shadow-md);
+  transition: width 0.25s ease, max-height 0.25s ease, border-radius 0.25s ease, transform 0.25s ease;
+}
+
+.imageExpanded {
+  width: min(100%, 760px);
+  max-height: 78vh;
+  border-radius: 26px;
+}
+
+@media (max-width: 1080px) {
+  .image {
+    width: min(100%, 320px);
+    max-height: 320px;
+  }
+
+  .imageExpanded {
+    width: min(100%, 560px);
+    max-height: 72vh;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    margin-top: 0.1rem;
+  }
+
+  .imageHero {
+    padding: 0.8rem;
+    border-radius: 28px;
+  }
+
+  .image {
+    width: min(100%, 240px);
+    max-height: 260px;
+  }
+
+  .imageExpanded {
+    width: min(100%, 92vw);
+    max-height: 68vh;
+    border-radius: 22px;
+  }
+}

@@ -1,0 +1,16 @@
+.appShell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerRegion {
+  padding-top: 0.2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-inline: clamp(1rem, 3.5vw, 2.8rem);
+}

@@ -1,0 +1,37 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2.6vw, 1.8rem);
+}
+
+.section {
+  position: relative;
+  padding: clamp(1rem, 2.8vw, 1.8rem);
+  border: 1px solid var(--color-border, rgba(218, 172, 128, 0.24));
+  background: linear-gradient(180deg, rgba(33, 25, 26, 0.95) 0%, rgba(16, 14, 15, 0.96) 100%);
+  border-radius: var(--radius-lg, 38px);
+  box-shadow: var(--shadow-md, 0 24px 60px rgba(0, 0, 0, 0.28));
+  overflow: clip;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(239, 171, 125, 0.55) 50%, transparent 100%);
+}
+
+.section:hover {
+  border-color: rgba(239, 171, 125, 0.34);
+  box-shadow: 0 28px 62px rgba(0, 0, 0, 0.34);
+}
+
+.heroSection {
+  padding: clamp(1.1rem, 3vw, 2.1rem);
+  background:
+    radial-gradient(circle at top right, rgba(111, 143, 137, 0.16), transparent 28%),
+    radial-gradient(circle at 15% 20%, rgba(223, 143, 103, 0.18), transparent 26%),
+    linear-gradient(180deg, rgba(41, 27, 28, 0.98) 0%, rgba(17, 13, 14, 0.98) 100%);
+}
