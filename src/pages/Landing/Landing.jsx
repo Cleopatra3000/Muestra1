@@ -8,6 +8,7 @@ import styles from './Landing.module.css'
 const Landing = () => {
   return (
     <div className={styles.page}>
+
       <section className={`${styles.section} ${styles.heroSection}`}>
         <Hero />
       </section>
@@ -25,6 +26,7 @@ const Landing = () => {
       </section>
 
       <FloatingWhatsApp />
+      
     </div>
   )
 }
